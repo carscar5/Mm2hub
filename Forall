@@ -1,0 +1,81 @@
+
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/Lib/main/Main"))()
+
+local win = DiscordLib:Window("BEST MM2 SCRIPTs FIREHUB")
+
+-- Liste des scripts avec noms, descriptions et loadstrings
+local scripts = {
+    {name = "Highlight Hub", description = "Highlight Hub is a great script for MM2.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/HighLightMM2/main/Main"))()'},
+    {name = "Nexus Hub", description = "Nexus Hub offers advanced features.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/NexusHub/main/Main"))()'},
+    {name = "Symphony Hub", description = "Symphony Hub provides comprehensive tools.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/Symphony-Hub/main/Main"))()'},
+    {name = "Highlight Hub (Lite for autofarm)", description = "A lite version of Highlight Hub optimized for autofarm.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/HighlightHubLight/main/Main"))()'},
+    {name = "Anti AFK", description = "Prevents you from being AFK kicked.", loadstring = 'loadstring(game:HttpGet("https://pastebin.com/raw/81e8th8J"))()'},
+    {name = "YARHM", description = "Yet Another Really Helpful Module.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/yarhm/main/Main"))()'},
+    {name = "Overdrive H", description = "Overdrive H is an experimental script.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/OverdriveH-TEST-/main/Main"))()'}
+}
+
+for _, script in ipairs(scripts) do
+    local server = win:Server(script.name, "")
+    local channel = server:Channel("Description")
+    
+    -- Adding description label
+    channel:Label(script.description)
+    
+    -- Adding button to execute script
+    channel:Button("Execute " .. script.name, function()
+        loadstring(script.loadstring)()
+        DiscordLib:Notification("Notification", script.name .. " executed!", "Okay!")
+    end)
+end
+
+-- Creating the "Other" server and channel
+local otherServer = win:Server("Other", "")
+local otherChannel = otherServer:Channel("Credits")
+
+-- Adding a label with credits
+otherChannel:Label("Credits : carscar52691 :)")
+
+-- Adding a button to remove the UI
+otherChannel:Button("Remove", function()
+    game.CoreGui.ScreenGui:Destroy()
+end)
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/Lib/main/Main"))()
+
+local win = DiscordLib:Window("MM2 SCRIPTs FIREHUB")
+
+-- Liste des scripts avec noms, descriptions et loadstrings
+local scripts = {
+    {name = "Highlight Hub", description = "Highlight Hub is a great script for MM2.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/HighLightMM2/main/Main"))()'},
+    {name = "Nexus Hub", description = "Nexus Hub offers advanced features.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/NexusHub/main/Main"))()'},
+    {name = "Symphony Hub", description = "Symphony Hub provides comprehensive tools.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/Symphony-Hub/main/Main"))()'},
+    {name = "Highlight Hub (Lite for autofarm)", description = "A lite version of Highlight Hub optimized for autofarm.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/HighlightHubLight/main/Main"))()'},
+    {name = "Anti AFK", description = "Prevents you from being AFK kicked.", loadstring = 'loadstring(game:HttpGet("https://pastebin.com/raw/81e8th8J"))()'},
+    {name = "YARHM", description = "Yet Another Really Helpful Module.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/yarhm/main/Main"))()'},
+    {name = "Overdrive H", description = "Overdrive H is an experimental script.", loadstring = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/ThatSiick/OverdriveH-TEST-/main/Main"))()'}
+}
+
+for _, script in ipairs(scripts) do
+    local server = win:Server(script.name, "")
+    local channel = server:Channel("Description")
+    
+    -- Adding description label
+    channel:Label(script.description)
+    
+    -- Adding button to execute script
+    channel:Button("Execute " .. script.name, function()
+        loadstring(script.loadstring)()
+        DiscordLib:Notification("Notification", script.name .. " executed!", "Okay!")
+    end)
+end
+
+-- Creating the "Other" server and channel
+local otherServer = win:Server("Other", "")
+local otherChannel = otherServer:Channel("Credits")
+
+-- Adding a label with credits
+otherChannel:Label("Credits : carscar52691 :)")
+
+-- Adding a button to remove the UI
+otherChannel:Button("Remove", function()
+    game.CoreGui.ScreenGui:Destroy()
+end)
